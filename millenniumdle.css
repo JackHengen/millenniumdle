@@ -1,0 +1,109 @@
+@font-face {
+    font-family: Millennium;
+    src: url(resources/fonts/Sigvar-Serial-Regular.ttf);
+}
+body{
+    background-color: lightcoral;
+    font-family: Millennium;
+    text-align: center;
+
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+h1{
+    color:red;
+    display: inline-block;
+    margin: .5em;
+}
+header{
+    box-sizing: border-box;
+    padding: .5em;
+    width:100%;
+}
+button{
+    font-family: Millennium;
+    font-weight:lighter;
+    margin: 0em 1em;
+}
+li{
+    margin:1em;
+}
+dialog{
+    max-width: 25vw;
+    min-width: 30ch;
+}
+dialog::backdrop{
+    background-color: rgba(50,50,50,.25);
+}
+input{
+    font-size: 16px;
+}
+input:focus{
+    font-size: 16px;
+}
+
+
+
+#headerContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#helpBtn{
+    width:2em;
+    height:2em;
+}
+#gameContainer{
+    box-sizing: border-box;
+    padding:1em;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+}
+#resultsContainer{
+    background-color: white;
+    width: 75%;
+    max-height: 90%;
+    overflow-y: scroll;
+    min-height: 10em;
+    border: 1px solid black;
+    position: relative;
+}
+#resultsHeader{
+    position:sticky; 
+    top: 0; width:100%; 
+    background-color:rgba(240,240,240);
+    padding: .5em 0em;   
+}
+#guessContainer{
+    display:flex;
+    align-items: center;
+    height: 10%;
+}
+.result{
+    display: inline-block;
+    width: 25%;
+}
+
+
+@media screen and (max-width:1160px){
+    body{
+        font-size: .9em;
+    }
+    .result{
+        width: 50%;
+    }
+    
+}
+@media screen and (max-width:800px){
+    body{
+        font-size: .8em;
+    }
+    .result{
+        width: 100%;
+    }
+}

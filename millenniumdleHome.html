@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Millenniumdle</title>
+    <link rel="stylesheet" href="millenniumdle.css">
+</head>
+
+<body>
+    <header>
+        <div id="headerContent">
+            <h1>Millennium<span style="color:greenyellow">dle</span></h1>
+            <input type="image" alt="Help" src="resources/images/Blue_question_mark_icon.svg" onclick="showHelp()" id="helpBtn"></button>
+        </div>
+        <hr>
+
+    </header>
+
+
+    <div id="gameContainer">
+    
+
+        <div id="resultsContainer">
+            <div id="resultsHeader">
+
+            </div>
+            <div id="results">
+                
+            </div>
+        </div>
+
+        <div id="guessContainer">
+            <input type="text" id="guessTxtInput">
+            <button id="guessBtn" onclick="guess()">Guess</button>
+        </div>
+        <div id="forfeit">
+
+        </div>
+        <div id="answer">
+
+        </div>
+        <div id="newGame">
+            
+        </div>
+    </div>
+
+    <dialog id="winDialog">
+
+        <h1>You Won!</h1>
+        <h3 id="winTxt"> </h3>  
+        <br>
+        <br>
+        <button onclick="closeWin()">Close</button>
+        <button onclick="newGame()">Play Again 🔁</button>
+
+    </dialog>
+
+    <dialog id="howToPlay">
+        <h1>How to play</h1>
+        
+        <p>Try to guess a mystery Millennium teacher chosen at random</p>
+
+        <ol>
+            <li>Input any teacher and press guess</li>
+            <li>The game will tell you whether certain traits of that teacher match the mystery teachers</li>
+            <li>Using these hints try to guess the mystery teacher in the fewest guesses as possible!</li>
+            </ol>
+
+            <hr>
+            <div id="gameExamples">
+
+            </div>
+            <button onclick="updateGameExample()">New Example</button>
+            <hr>
+            <p>If the guessed teacher and mystery teacher teach one or more grade or subject in common, the game will show: ✅</p>
+            <button onclick="closeHelp()">Got it 👍</button>
+    </dialog>
+
+        
+
+
+
+    <script src="classes.js"></script>
+    <script src="teachers.js"></script>
+    <script src="millenniumdle.js"></script>
+    <script src="helpDialog.js"></script>
+
+</body>
+</html>
